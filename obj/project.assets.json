@@ -1701,11 +1701,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UNCLE\\Desktop\\CountdownDays\\CountdownDays.csproj",
+      "projectUniqueName": "C:\\Users\\UNCLE\\Desktop\\Git\\CountdownDays\\CountdownDays.csproj",
       "projectName": "CountdownDays",
-      "projectPath": "C:\\Users\\UNCLE\\Desktop\\CountdownDays\\CountdownDays.csproj",
+      "projectPath": "C:\\Users\\UNCLE\\Desktop\\Git\\CountdownDays\\CountdownDays.csproj",
       "packagesPath": "C:\\Users\\UNCLE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UNCLE\\Desktop\\CountdownDays\\obj\\",
+      "outputPath": "C:\\Users\\UNCLE\\Desktop\\Git\\CountdownDays\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

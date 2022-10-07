@@ -8,7 +8,7 @@ using System;
 
 namespace CountdownDays
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "CountdownDays", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity {
         TextView textViewDays;
         TextView textViewDescription;

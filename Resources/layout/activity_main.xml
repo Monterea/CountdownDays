@@ -198,6 +198,7 @@
         android:id="@+id/buttonCountDays"
         android:text="SPOČÍTEJ VLASTNÍ DATUM"
         android:textStyle="bold"
+        android:layout_margin="20px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:height="50px"
