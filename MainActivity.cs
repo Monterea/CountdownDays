@@ -34,7 +34,6 @@ namespace CountdownDays
             SetContentView(Resource.Layout.activity_main);
             SetupReferences();
             SubscribeEvenHandlers();
-
         }
         private void SetupReferences() {
             textViewDays = FindViewById<TextView>(Resource.Id.textViewDays);
@@ -65,9 +64,6 @@ namespace CountdownDays
             rbJiriNameDay.Click += RbJiriNameDay_Click;
             textInputCustomDate.Click += TextInputCustomDate_Click;
         }
-
-        
-
         private void TextInputCustomDate_Click(object sender, EventArgs e) {
             rbOther.Checked = true;
         }
@@ -78,7 +74,6 @@ namespace CountdownDays
                 ViewTheCountOfDays("Jiri's NameDay");
             }
         }
-
         private void RbJiriBirthday_Click(object sender, EventArgs e) {
             if (rbJiriBirthday.Checked) {
                 CountEndDate(5, 2, today.Year);
@@ -86,7 +81,6 @@ namespace CountdownDays
                 ViewTheCountOfDays("Jiri's Birthday");
             }
         }
-
         private void RbMatejNameDay_Click(object sender, EventArgs e) {
             if (rbMatejNameDay.Checked) {
                 CountEndDate(24, 2, today.Year);
@@ -94,7 +88,6 @@ namespace CountdownDays
                 ViewTheCountOfDays("Matej's NameDay");
             }
         }
-
         private void RbMatejBirthday_Click(object sender, EventArgs e) {
             if (rbMatejBirthday.Checked) {
                 CountEndDate(8, 9, today.Year);
@@ -102,7 +95,6 @@ namespace CountdownDays
                 ViewTheCountOfDays("Matej's Birthday");
             }
         }
-
         private void RbDanielNameDay_Click(object sender, EventArgs e) {
             if (rbDanielNameDay.Checked) {
                 CountEndDate(17, 12, today.Year);
@@ -110,7 +102,6 @@ namespace CountdownDays
                 ViewTheCountOfDays("Daniel's NameDay");
             }
         }
-
         private void RbDanielBirthday_Click(object sender, EventArgs e) {
             if (rbDanielBirthday.Checked) {
                 CountEndDate(25, 8, today.Year);
@@ -118,7 +109,6 @@ namespace CountdownDays
                 ViewTheCountOfDays("Daniel's Birthday");
             }
         }
-
         private void ButtonCountDays_Click(object sender, EventArgs e) {
             string[] datum = textInputCustomDate.Text.Split('.');
             int day = Convert.ToInt32(datum[0]);
@@ -128,7 +118,6 @@ namespace CountdownDays
             CountTimeSpan();
             ViewTheCountOfDays("my event");
         }
-
         private void RbHalloween_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e) {
             if (rbHalloween.Checked) {
                 CountEndDate(31, 10, today.Year);
@@ -143,21 +132,16 @@ namespace CountdownDays
                 ViewTheCountOfDays("Summer");
             }
         }
-
         private void RbChristmas_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e) {
             if (rbChristmas.Checked) {
                 CountEndDate(24, 12, today.Year);
                 CountTimeSpan();
                 ViewTheCountOfDays("Christmas");
             }
-        }
-
-
-       
+        }   
         private void CountEndDate(int day, int month, int year) {
             endDate = new DateTime(year, month, day);
-            //zjišťujeme jestli není dnešní aktuální den vyšší než den, který hledáme
-            if (today.DayOfYear > endDate.DayOfYear) { //pokud ano tak se bude odpočítávat hledaný den z dalšího roku                                                   
+            if (today.DayOfYear > endDate.DayOfYear) {                                               
                 endDate = endDate.AddYears(1);
             }
         }
@@ -168,7 +152,5 @@ namespace CountdownDays
             textViewDays.Text = daysToEvent.Days.ToString();
             textViewDescription.Text = $"days until {eventToDisplay}";
         }
-
-
     }
 }
